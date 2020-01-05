@@ -44,6 +44,21 @@ class _TextFieldScreenState extends State<TextFieldScreen> {
           Container(
             child: TextField(
               controller: _controller,
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide( color: Colors.transparent ),
+                  borderRadius: BorderRadius.all(Radius.circular(30))
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide( color: Colors.transparent ),
+                    borderRadius: BorderRadius.all(Radius.circular(30))
+                ),
+                prefixIcon: Icon(Icons.enhanced_encryption),
+                hintText: "Login here",
+                suffixIcon: Icon(Icons.arrow_forward_ios),
+                filled: true,
+                fillColor: Colors.grey[200]
+              ),
             ),
             padding: EdgeInsets.all(20),
           ),
